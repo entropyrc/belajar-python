@@ -1,3 +1,4 @@
 repositori ini berguna untuk memberikan pemahaman dari bahasa pemrograman Python untuk pemula yang baru belajar
 
-menambahkan kalimat di baris ketiga
+
+menghapus kalimat di baris ke tiga dan menambahkan kalimat di baris ke empat
