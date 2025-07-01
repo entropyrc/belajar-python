@@ -1,1 +1,3 @@
 repositori ini berguna untuk memberikan pemahaman dari bahasa pemrograman Python untuk pemula yang baru belajar
+
+menambahkan kalimat di baris ketiga
