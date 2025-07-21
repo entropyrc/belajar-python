@@ -1,0 +1,4 @@
+# ignore folder/direcorty
+__pycache__/
+
+# ignore file spesifik

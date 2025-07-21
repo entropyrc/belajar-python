@@ -1,42 +1,51 @@
 import random
+from libs import welcome_message
 
-welcome_message = "Welcome to CUYPY Games!"
 cuypy_position = random.randint(1, 4)
 
-print("*****************************")
-print(f"** {welcome_message} **")
-print("*****************************")
-
+welcome_message("Selamat datang di CUYPY")
 nama_user = input("Masukkan nama kamu: ")
+
+while nama_user == "":
+    nama_user = input("Isi dulu nama anda: ")
 
 bentuk_goa = "|_|"
 goa_kosong =[bentuk_goa] * 4
 
 goa = goa_kosong.copy()
-goa[cuypy_position - 1] = "0_0"
+goa[cuypy_position - 1] = "|0_0|"
 
 goa_kosong = '  '.join(goa_kosong)
 goa = '  '.join(goa)
 
-print(f'''
+while True:
+    print(f'''
 Halo {nama_user}! Coba perhatikan goa di bawah ini
 {goa_kosong}
 ''')
 
-pilihan_user = int(input("Menurut kamu, CUYPY ada di goa ke berapa? [1 / 2 / 3 / 4]: "))
+    pilihan_user = int(input("Menurut kamu, CUYPY ada di goa ke berapa? [1 / 2 / 3 / 4]: "))
 
-confirm_answer = input(f"Apakah kamu yakin jawabannya adalah {pilihan_user}? [y/n]: ")
+    while pilihan_user > 4:
+        pilihan_user = int(input("Pilihanmu hanya dibatasi dari 1 sampai 4 saja, silahkan pilih ulang [1 / 2 / 3 / 4]: "))
 
-if confirm_answer == "n":
-    print("Program dihentikan!")
-    exit()
-elif confirm_answer == "y":
-    if pilihan_user == cuypy_position:
-        print(f"{goa}\nSelamat, kamu menang!")
+    confirm_answer = input(f"Apakah kamu yakin jawabannya adalah {pilihan_user}? [y/n]: ")
+
+    if confirm_answer == "n":
+        print("Program dihentikan!")
+        exit()
+    elif confirm_answer == "y":
+        if pilihan_user == cuypy_position:
+            print(f"\n{goa}\n\nSelamat, kamu menang!")
+        else:
+            print(f"\n{goa}\n\nMaaf, kamu kalah!")
+
     else:
-        print(f"{goa}\nMaaf, kamu kalah!")
+        print("Silahkan ulangi programnya!")
+        exit()
 
-else:
-    print("Silahkan ulangi programnya!")
-    exit()
+    play_again = input("\n\nApakah ingin melanjutkan gamenya lagi? [y/n]: ")
+    if play_again == "n":
+        break
 
+print("Program selesai")
