@@ -1,5 +1,6 @@
 # ignore folder/direcorty
 __pycache__/
+'Eksperimen Python'/
 
 # ignore file spesifik
 tes.py
