@@ -1,7 +1,7 @@
 # ignore folder/direcorty
 __pycache__/
 'Eksperimen Python'/
-'Dokumentasi Python'/.ipynb_checkpoints/
+'Dokumentasi Python'/.ipynb_checkpoints
 
 # ignore file spesifik
 tes.py
